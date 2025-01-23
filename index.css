@@ -1,0 +1,118 @@
+h3{
+	color: blue;
+	font-size: 30px;
+}
+
+@keyframes box{
+	0% {background-color: red;}
+	25%{ background-color: pink;}
+	50%{ background-color: green;}
+	75%{ background-color: yellow;}
+	100%{ background-color: black;}
+}
+ @keyframes text{
+	 0%{
+		 top:0;
+		 font-size:12px;
+		 font-family: arial;
+		 font-style: italic;
+		 color:red;
+	 }
+	 50%{
+		 top:10px;
+		 font-size:24px;
+		 font-family: serif;
+		 font-weight: bold;
+		 color:blue;
+	 }
+	 100%{
+		 top:20px;
+		 font-size:36px;
+		 font-family:monospace;
+		text-decoration:underline;
+		color:black;
+	 }
+ }
+ @keyframes ball{
+	0%,100% {
+		top: 0px;
+		left: 0px;
+		background-color: red;
+	}
+	25%{top:100px;left:0px;background-color: blue;}
+	50%{top:100px;left:100px; background-color: green;}
+	75%{top:0px;left:100px;background-color: yellow}
+ }
+#div{
+	width:100px;
+	height: 100px;
+	background-color: red;
+	animation-name: box;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#svg{
+	width:100px;
+	height: 100px;
+	background-color: red;
+	animation-name: box;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#ball{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	background-color: blue;
+	position: relative;
+	animation: ball 4s infinite linear;
+}
+
+
+#text{
+	width:1000px;
+	height: 100px;
+	animation: text 5s 1 linear;
+	position: relative;
+}
+
+
+@keyframes a1{
+	0% {color: red;}
+	50%{color: green;}
+	100%{color: black;}
+}
+@keyframes a2{
+	0% {font-size: 10px;}
+	50%{ font-size: 20px;}
+	100%{ font-size: 30px;}
+}
+#text1{
+	width:1000px;
+	height: 100px;
+	animation-name:a1,a2;
+	animation-duration:2s;
+	}
+
+@keyframes svg1{
+	0% {transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+
+#svg1{
+	width:0;
+	height: 0;
+	border-left:50px solid transparent;
+	border-right:50px solid transparent;
+	border-top:50px solid blue;
+	animation-name: svg1;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	position:relative;
+	animation-fill-mode: linear;
+}
